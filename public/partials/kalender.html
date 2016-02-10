@@ -1,0 +1,24 @@
+<link rel='stylesheet' href='css/fullcalendar.css' />
+
+
+<div class="container" id="calendar" ng-controller="KalenderController">
+
+    <table class="table">
+        <tr ng-repeat="entry in data">
+            <td>{{entry.id}}</td>
+            <td>{{entry.title}}</td>
+            <td>{{entry.desc}}</td>
+            <td>{{entry.startDate}}</td>
+            <td>{{entry.endDate}}</td>
+            <td>{{entry.startTime}}</td>
+            <td>{{entry.endTime}}</td>
+        </tr>
+    </table>
+    <nav>
+        <ul class="pager">
+            <li class="previous disabled"><a href="#">Previous</a></li>
+            <li class="next"><a href="#">Next</a></li>
+        </ul>
+    </nav>
+
+</div>

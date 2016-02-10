@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html ng-app="onCollab">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="team, collaboration, tool, group, projekt, gruppen, arbeit, organisation" />
+    <meta name="description" content="Online Collaboration Tool zur Organisation von Gruppen- und Projektarbeiten" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css "/>
+    <base href="/">
+    <title>Online Collaboration Tool</title>
+</head>
+<body>
+    <div class="container" id="main">
+        <div class="page-header">
+        <h1>Online Collaboration Tool <small>zur Organisation von Gruppen- und Projektarbeiten</small></h1>
+        </div>
+
+        <div class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-container" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">onCollab</a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-container">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/">Home<span class="sr-only">(current)</span></a></li>
+                        <li><a href="/kalender">Kalender</a></li>
+                        <li><a href="/notizen">Notizen</a></li>
+                        <li><a href="/links">Linksammlung</a></li>
+                        <li><a href="">Dokument</a></li>
+                        <li><a href="">Chat</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Account <strong class="caret"></strong></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">anmelden</a></li>
+                                <li><a href="#">registrieren</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">ausloggen</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div ng-view  class="container" id="content">
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+    <script type="text/javascript" src="/js/angular.min.js"></script>
+    <script type="text/javascript" src="/js/angular-route.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/app.js"></script>
+    <script type="text/javascript" src="/js/controllers/controllers.js"></script>
+    <script type="text/javascript" src="/js/controllers/notizenController.js"></script>
+    <!--fullCalendar scripts-->
+    <script type="text/javascript" src="/js/fullcalendar/lib/moment.min.js"></script>
+    <script type="text/javascript" src="/js/fullcalendar/fullcalendar.js"></script>
+    <script type="text/javascript" src="/js/fullcalendar/lang-all.js"></script>
+    <script type="text/javascript" src="/js/kalender.js"></script>
+    <!-- Notizen und Sketch scripts-->
+    <script type="text/javascript" src="/js/sketch.js"></script>
+
+</body>
+</html>

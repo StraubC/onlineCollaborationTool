@@ -1,0 +1,77 @@
+<div class="row" ng-controller="LinkController as link">
+    <div class="col-md-3" ng-repeat="link in links">
+        <div class="panel panel-default">
+            <h4 class="panel-heading">{{link.name}}</h4>
+            <div class="panel-body">
+                <a href="{{link.url}}">{{link.url}}</a>
+                <p>{{link.desc}}</p>
+            </div>
+
+            <div class="panel-footer">
+                <a href="#editLink" role="button" class="btn btn-info btn-sm" ng-click="getLink(link._id)" data-toggle="modal"><span class="glyphicon glyphicon-pencil"></span></a> <button type="submit" class="btn btn-warning btn-sm" ng-click="deleteLink(link._id)"><span class="glyphicon glyphicon-remove"></span></button>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="col-md-3">
+        <div class="panel panel-default">
+            <h4 class="panel-heading">neuer Eintrag</h4>
+            <div class="panel-body">
+                <a href=""></a>
+                <p></p>
+            </div>
+
+            <div class="panel-footer">
+                <a href="#addLink" role="button" class="btn btn-info" data-toggle="modal"><span class="glyphicon glyphicon-plus"></span>neuer Link</a>
+                <!--<button type="submit" class="btn btn-info" ng-click="postLinks()"><span class="glyphicon glyphicon-plus"></span>neuer Link</button>-->
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="addLink">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal">&times;</button>
+
+                    <h4 class="modal-title">neuer Eintrag</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input type="text" class="form-control input" placeholder="Titel" ng-model="newLink.name">
+                        <input type="text" class="form-control input" placeholder="http:\\www.de" ng-model="newLink.url">
+                        <input type="text" class="form-control input" placeholder="Beschreibung" ng-model="newLink.desc">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" data-dismiss="modal" type="button">schließen</button> <button class="btn btn-primary" type="submit" ng-click="postLink()"data-dismiss="modal">speichern</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="editLink">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal">&times;</button>
+
+                    <h4 class="modal-title">Eintrag bearbeiten</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input type="text" class="form-control input" placeholder="{{updateLink.name}}" ng-model="updateLink.name">
+                        <input type="text" class="form-control input" placeholder="{{updateLink.url}}" ng-model="updateLink.url">
+                        <input type="text" class="form-control input" placeholder="{{updateLink.desc}}" ng-model="updateLink.desc">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" data-dismiss="modal" type="button">schließen</button> <button class="btn btn-primary" ng-click="editLink(updateLink._id)" type="button">speichern</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
