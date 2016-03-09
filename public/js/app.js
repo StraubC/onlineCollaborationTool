@@ -1,5 +1,5 @@
 (function() {
-    angular.module('onCollab', ['ngRoute'/*, 'onCollabControllers'*/])
+    angular.module('onCollab', ['ngRoute', 'ui.calendar', 'ui.bootstrap'])
 
         .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
             $routeProvider

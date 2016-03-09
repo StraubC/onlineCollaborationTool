@@ -6,6 +6,7 @@
     <meta name="keywords" content="team, collaboration, tool, group, projekt, gruppen, arbeit, organisation" />
     <meta name="description" content="Online Collaboration Tool zur Organisation von Gruppen- und Projektarbeiten" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css "/>
+    <link rel="stylesheet" href="bower_components/fullcalendar/dist/fullcalendar.css"/>
     <base href="/">
     <title>Online Collaboration Tool</title>
 </head>
@@ -67,11 +68,13 @@
     <script type="text/javascript" src="/js/app.js"></script>
     <script type="text/javascript" src="/js/controllers/controllers.js"></script>
     <script type="text/javascript" src="/js/controllers/notizenController.js"></script>
-    <!--fullCalendar scripts-->
-    <script type="text/javascript" src="/js/fullcalendar/lib/moment.min.js"></script>
-    <script type="text/javascript" src="/js/fullcalendar/fullcalendar.js"></script>
-    <script type="text/javascript" src="/js/fullcalendar/lang-all.js"></script>
-    <script type="text/javascript" src="/js/kalender.js"></script>
+    <script type="text/javascript" src="/js/controllers/kalenderController.js"></script>
+
+    <!-- Kalender scripts-->
+    <script type="text/javascript" src="../bower_components/moment/min/moment.min.js"></script>
+    <script type="text/javascript" src="../bower_components/angular-ui-calendar/src/calendar.js"></script>
+    <script type="text/javascript" src="../bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+    <script type="text/javascript" src="../bower_components/fullcalendar/dist/gcal.js"></script>
     <!-- Notizen und Sketch scripts-->
     <script type="text/javascript" src="/js/sketch.js"></script>
 

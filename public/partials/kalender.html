@@ -1,7 +1,7 @@
-<link rel='stylesheet' href='css/fullcalendar.css' />
 
 
-<div class="container" id="calendar" ng-controller="KalenderController">
+<div class="container" ng-controller="KalenderController">
+    <div ui-calendar ng-model="eventSources"></div>
 
     <table class="table">
         <tr ng-repeat="entry in data">

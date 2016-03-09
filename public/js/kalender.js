@@ -1,4 +1,4 @@
-$(document).ready(function() {
+(function() {
 	$('#calendar').fullCalendar({
     	height: 600, 
     	lang: 'de',
